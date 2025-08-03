@@ -1,0 +1,1840 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SSAS</ID>
+  <Name>SSAS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <Dimensions>
+    <Dimension>
+      <ID>DIM DATE</ID>
+      <Name>DIM DATE</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2229" scrolltop="-4595" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7955" y="12471" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01a30000900180380100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DATE" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3651" height="3298" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000430e0000e20c0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_DATE" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-2229</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-4595</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+          <Value>
+            <DiagramLayout ZoomPercent="100" ViewPortX="23" ViewPortY="0" xmlns="">
+              <Shapes NodeWidth="175">
+                <Shape Id="DATE ID" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="DATE ID" />
+                  </Attributes>
+                  <Position x="20" y="20" />
+                </Shape>
+                <Shape Id="DAY OF WEEK" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="DAY OF WEEK" />
+                  </Attributes>
+                  <Position x="243" y="20" />
+                </Shape>
+                <Shape Id="DAY HOUSE" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="DAY HOUSE" />
+                  </Attributes>
+                  <Position x="467" y="20" />
+                </Shape>
+                <Shape Id="WEEK OF YEAR" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="WEEK OF YEAR" />
+                  </Attributes>
+                  <Position x="691" y="20" />
+                </Shape>
+                <Shape Id="MONTH HOUSE" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="MONTH HOUSE" />
+                  </Attributes>
+                  <Position x="915" y="20" />
+                </Shape>
+                <Shape Id="QUARTER HOUSE" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="QUARTER HOUSE" />
+                  </Attributes>
+                  <Position x="1138" y="20" />
+                </Shape>
+                <Shape Id="YEAR HOUSE" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="YEAR HOUSE" />
+                  </Attributes>
+                  <Position x="1362" y="20" />
+                </Shape>
+              </Shapes>
+            </DiagramLayout>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>House DW</DataSourceViewID>
+      </Source>
+      <UnknownMember>Visible</UnknownMember>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>DATE ID</ID>
+          <Name>DATE ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>DATE_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>DAY OF WEEK</AttributeID>
+              <Name>DAY OF WEEK</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>DAY HOUSE</ID>
+          <Name>DAY HOUSE</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>DAY_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>WEEK_OF_YEAR</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>MONTH_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>QUARTER_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>YEAR_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DIM_DATE</TableID>
+              <ColumnID>DAY_HOUSE</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>WEEK OF YEAR</AttributeID>
+              <Name>WEEK OF YEAR</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>MONTH HOUSE</ID>
+          <Name>MONTH HOUSE</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>MONTH_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>QUARTER_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>YEAR_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DIM_DATE</TableID>
+              <ColumnID>MONTH_HOUSE</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>QUARTER HOUSE</AttributeID>
+              <Name>QUARTER HOUSE</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>QUARTER HOUSE</ID>
+          <Name>QUARTER HOUSE</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>QUARTER_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>YEAR_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DIM_DATE</TableID>
+              <ColumnID>QUARTER_HOUSE</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>YEAR HOUSE</AttributeID>
+              <Name>YEAR HOUSE</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>YEAR HOUSE</ID>
+          <Name>YEAR HOUSE</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>YEAR_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DIM_DATE</TableID>
+              <ColumnID>YEAR_HOUSE</ColumnID>
+            </Source>
+          </NameColumn>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>WEEK OF YEAR</ID>
+          <Name>WEEK OF YEAR</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>WEEK_OF_YEAR</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>MONTH_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>QUARTER_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>YEAR_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DIM_DATE</TableID>
+              <ColumnID>WEEK_OF_YEAR</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>MONTH HOUSE</AttributeID>
+              <Name>MONTH HOUSE</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>DAY OF WEEK</ID>
+          <Name>DAY OF WEEK</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>DAY_OF_WEEK</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>DAY_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>WEEK_OF_YEAR</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>MONTH_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>QUARTER_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_DATE</TableID>
+                <ColumnID>YEAR_HOUSE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_DIM_DATE</TableID>
+              <ColumnID>DAY_OF_WEEK</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>DAY HOUSE</AttributeID>
+              <Name>DAY HOUSE</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Hierarchy</ID>
+          <Name>Date_Transaction</Name>
+          <Levels>
+            <Level>
+              <ID>MONTH HOUSE</ID>
+              <Name>MONTH HOUSE</Name>
+              <SourceAttributeID>MONTH HOUSE</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>DAY OF WEEK</ID>
+              <Name>DAY OF WEEK</Name>
+              <SourceAttributeID>DAY OF WEEK</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>QUARTER HOUSE</ID>
+              <Name>QUARTER HOUSE</Name>
+              <SourceAttributeID>QUARTER HOUSE</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>WEEK OF YEAR</ID>
+              <Name>WEEK OF YEAR</Name>
+              <SourceAttributeID>WEEK OF YEAR</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>DAY HOUSE</ID>
+              <Name>DAY HOUSE</Name>
+              <SourceAttributeID>DAY HOUSE</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>YEAR HOUSE</ID>
+              <Name>YEAR HOUSE</Name>
+              <SourceAttributeID>YEAR HOUSE</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>DIM HOUSE</ID>
+      <Name>DIM HOUSE</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="4" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1347" scrolltop="-2213" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7955" y="12471" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01a30000900180380100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_HOUSE" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4763" height="2593" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00009b120000210a0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_HOUSE" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="LOCATION_HOUSE" left="901" top="4993" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="2593" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000210a0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_LOCATION_HOUSE" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2002" top="2293" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[LOCATION_ID_fk]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="4" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="2401" y="4993" />
+                  <point x="2401" y="2593" />
+                </connector>
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-1347</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-2213</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+          <Value>
+            <DiagramLayout ZoomPercent="100" ViewPortX="220" ViewPortY="0" xmlns="">
+              <Shapes NodeWidth="233">
+                <Shape Id="HOUSE ID" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="HOUSE ID" />
+                    <Attribute Id="NUMBER OF BEDROOMS" />
+                    <Attribute Id="NUMBER OF FLOORS" />
+                    <Attribute Id="TYPE OF HOUSING" />
+                  </Attributes>
+                  <Position x="20" y="20" />
+                </Shape>
+                <Shape Id="LOCATION ID" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="LOCATION ID" />
+                  </Attributes>
+                  <Position x="316" y="20" />
+                </Shape>
+                <Shape Id="ROAD" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="ROAD" />
+                  </Attributes>
+                  <Position x="612" y="20" />
+                </Shape>
+                <Shape Id="WARD" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="WARD" />
+                  </Attributes>
+                  <Position x="908" y="20" />
+                </Shape>
+                <Shape Id="DISTRICT" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="DISTRICT" />
+                  </Attributes>
+                  <Position x="1205" y="20" />
+                </Shape>
+                <Shape Id="PROVINCE" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="PROVINCE" />
+                  </Attributes>
+                  <Position x="1501" y="20" />
+                </Shape>
+              </Shapes>
+            </DiagramLayout>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>House DW</DataSourceViewID>
+      </Source>
+      <UnknownMember>Visible</UnknownMember>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>HOUSE ID</ID>
+          <Name>HOUSE ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_HOUSE</TableID>
+                <ColumnID>HOUSE_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>TYPE OF HOUSING</AttributeID>
+              <Name>TYPE OF HOUSING</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>NUMBER OF FLOORS</AttributeID>
+              <Name>NUMBER OF FLOORS</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>NUMBER OF BEDROOMS</AttributeID>
+              <Name>NUMBER OF BEDROOMS</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>LOCATION ID</AttributeID>
+              <Name>LOCATION ID</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>TYPE OF HOUSING</ID>
+          <Name>TYPE OF HOUSING</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_HOUSE</TableID>
+                <ColumnID>TYPE_OF_HOUSING</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>NUMBER OF FLOORS</ID>
+          <Name>NUMBER OF FLOORS</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_HOUSE</TableID>
+                <ColumnID>NUMBER_OF_FLOORS</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>NUMBER OF BEDROOMS</ID>
+          <Name>NUMBER OF BEDROOMS</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>SmallInt</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_HOUSE</TableID>
+                <ColumnID>NUMBER_OF_BEDROOMS</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>LOCATION ID</ID>
+          <Name>LOCATION ID</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>LOCATION_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>ROAD</AttributeID>
+              <Name>ROAD</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>ROAD</ID>
+          <Name>ROAD</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>555</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>ROAD</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>WARD</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>DISTRICT</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>6</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>PROVINCE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>555</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_LOCATION_HOUSE</TableID>
+              <ColumnID>ROAD</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>WARD</AttributeID>
+              <Name>WARD</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>WARD</ID>
+          <Name>WARD</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>WARD</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>DISTRICT</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>6</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>PROVINCE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>255</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_LOCATION_HOUSE</TableID>
+              <ColumnID>WARD</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>DISTRICT</AttributeID>
+              <Name>DISTRICT</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>DISTRICT</ID>
+          <Name>DISTRICT</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>DISTRICT</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>6</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>PROVINCE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>255</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_LOCATION_HOUSE</TableID>
+              <ColumnID>DISTRICT</ColumnID>
+            </Source>
+          </NameColumn>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>PROVINCE</AttributeID>
+              <Name>PROVINCE</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>PROVINCE</ID>
+          <Name>PROVINCE</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>6</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_LOCATION_HOUSE</TableID>
+                <ColumnID>PROVINCE</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>6</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>dbo_LOCATION_HOUSE</TableID>
+              <ColumnID>PROVINCE</ColumnID>
+            </Source>
+          </NameColumn>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy>
+          <ID>Hierarchy</ID>
+          <Name>Hierarchy</Name>
+          <Levels>
+            <Level>
+              <ID>ROAD</ID>
+              <Name>ROAD</Name>
+              <SourceAttributeID>ROAD</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>WARD</ID>
+              <Name>WARD</Name>
+              <SourceAttributeID>WARD</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>DISTRICT</ID>
+              <Name>DISTRICT</Name>
+              <SourceAttributeID>DISTRICT</SourceAttributeID>
+            </Level>
+            <Level>
+              <ID>PROVINCE</ID>
+              <Name>PROVINCE</Name>
+              <SourceAttributeID>PROVINCE</SourceAttributeID>
+            </Level>
+          </Levels>
+        </Hierarchy>
+      </Hierarchies>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>DIM LEGAL DOCUMENTS</ID>
+      <Name>DIM LEGAL DOCUMENTS</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>House DW</DataSourceViewID>
+      </Source>
+      <UnknownMember>Visible</UnknownMember>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>PAPERS ID</ID>
+          <Name>PAPERS ID</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <NullProcessing>UnknownMember</NullProcessing>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_LEGAL_DOCUMENTS</TableID>
+                <ColumnID>PAPERS_ID</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>PAPERS</AttributeID>
+              <Name>PAPERS</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>PAPERS</ID>
+          <Name>PAPERS</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_DIM_LEGAL_DOCUMENTS</TableID>
+                <ColumnID>PAPERS</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+  </Dimensions>
+  <Cubes>
+    <Cube>
+      <ID>House DW</ID>
+      <Name>House DW</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="20" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1781" scrolltop="-2783" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="39185" y="21775" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01a30000900144420100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="LOCATION_HOUSE" left="10849" top="5033" logicalid="10" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2593" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000210a0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_LOCATION_HOUSE" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT" left="901" top="9986" logicalid="11" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="3651" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000430e0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_FACT" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_HOUSE" left="20" top="4993" logicalid="12" controlid="3" masterid="0" hint1="0" hint2="0" width="4763" height="2593" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00009b120000210a0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_HOUSE" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_LEGAL_DOCUMENTS" left="6301" top="11044" logicalid="13" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="1535" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000ff050000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_LEGAL_DOCUMENTS" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DATE" left="9772" top="13968" logicalid="14" controlid="5" masterid="0" hint1="0" hint2="0" width="3651" height="3298" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000430e0000e20c0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_DIM_DATE" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4483" top="4830" logicalid="15" controlid="6" masterid="0" hint1="0" hint2="0" width="6666" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[LOCATION_ID_fk]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="10" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="10849" y="5229" />
+                  <point x="7816" y="5229" />
+                  <point x="7816" y="5189" />
+                  <point x="4783" y="5189" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2002" top="7087" logicalid="16" controlid="7" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[HOUSE_ID_fk]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="9" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="2401" y="7586" />
+                  <point x="2401" y="9986" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3601" top="13161" logicalid="17" controlid="8" masterid="0" hint1="0" hint2="0" width="6471" height="1756" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[DATE_ID_fk]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="14" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="9772" y="14517" />
+                  <point x="6837" y="14517" />
+                  <point x="6837" y="13461" />
+                  <point x="3901" y="13461" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3601" top="11412" logicalid="18" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[PAPERS_ID_fk]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="12" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="6301" y="11811" />
+                  <point x="3901" y="11811" />
+                </connector>
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-1781</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>-2783</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>4993</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>75</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Dimensions>
+        <Dimension>
+          <ID>DIM LEGAL DOCUMENTS</ID>
+          <Name>DIM LEGAL DOCUMENTS</Name>
+          <DimensionID>DIM LEGAL DOCUMENTS</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>PAPERS ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PAPERS</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>DIM DATE</ID>
+          <Name>DIM DATE</Name>
+          <DimensionID>DIM DATE</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>DATE ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>DAY HOUSE</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>MONTH HOUSE</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>QUARTER HOUSE</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>YEAR HOUSE</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>WEEK OF YEAR</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>DAY OF WEEK</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+        <Dimension>
+          <ID>DIM HOUSE</ID>
+          <Name>DIM HOUSE</Name>
+          <DimensionID>DIM HOUSE</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>HOUSE ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>TYPE OF HOUSING</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>NUMBER OF FLOORS</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>NUMBER OF BEDROOMS</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>LOCATION ID</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>ROAD</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>WARD</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>DISTRICT</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>PROVINCE</AttributeID>
+            </Attribute>
+          </Attributes>
+          <Hierarchies>
+            <Hierarchy>
+              <HierarchyID>Hierarchy</HierarchyID>
+            </Hierarchy>
+          </Hierarchies>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup>
+          <ID>FACT</ID>
+          <Name>FACT</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>Area</ID>
+              <Name>Area</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT</TableID>
+                  <ColumnID>Area</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Price</ID>
+              <Name>Price</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT</TableID>
+                  <ColumnID>Price</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Long</ID>
+              <Name>Long</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT</TableID>
+                  <ColumnID>Long</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>Width</ID>
+              <Name>Width</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_FACT</TableID>
+                  <ColumnID>Width</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>FACT Count</ID>
+              <Name>FACT Count</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_FACT</TableID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>DIM LEGAL DOCUMENTS</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>PAPERS ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT</TableID>
+                        <ColumnID>PAPERS_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>DIM DATE</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>DATE ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT</TableID>
+                        <ColumnID>DATE_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>DIM HOUSE</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>HOUSE ID</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <NullProcessing>UnknownMember</NullProcessing>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_FACT</TableID>
+                        <ColumnID>HOUSE_ID</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>FACT</ID>
+              <Name>FACT</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>House DW</DataSourceViewID>
+                <TableID>dbo_FACT</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+      </MeasureGroups>
+      <Source>
+        <DataSourceViewID>House DW</DataSourceViewID>
+      </Source>
+      <MdxScripts>
+        <MdxScript>
+          <ID>MdxScript</ID>
+          <Name>MdxScript</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <Commands>
+            <Command>
+              <Text>/* The CALCULATE command controls the aggregation of leaf cells in the cube.
+   If the CALCULATE command is deleted or modified, the data within the cube is affected.
+   You should edit this command only if you manually specify how the cube is aggregated. */
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Rollup Price]
+ AS AGGREGATE(
+        [DIM DATE].[YEAR HOUSE].CurrentMember.Children,
+        [Measures].[Price]
+    ), 
+VISIBLE = 1  ;  
+CREATE MEMBER CURRENTCUBE.[Measures].[HOUSE_VALUE]
+ AS [Measures].[PRICE] * [Measures].[AREA], 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[DISTRICT_AVG_VALUE]
+ AS AVG(
+        [DIM HOUSE].[HOUSE ID].ALLMEMBERS,
+        [Measures].[HOUSE_VALUE]
+    ), 
+VISIBLE = 1;  
+CREATE DYNAMIC SET CURRENTCUBE.[AVGWardDistrictMax]
+ AS GENERATE(
+        TOPCOUNT(
+            ORDER(
+                EXCEPT([DIM HOUSE].[DISTRICT].MEMBERS, {[DIM HOUSE].[DISTRICT].[ALL]}),
+                [Measures].[DISTRICT_AVG_VALUE],
+                DESC
+            ),
+            1
+        ),
+        EXCEPT([DIM HOUSE].[WARD].CHILDREN, {[DIM HOUSE].[WARD].&amp;[NaN]})
+    );     
+
+/* Dynamic Set: Ordered Houses by Price (Descending) */
+CREATE DYNAMIC SET CURRENTCUBE.[OrderedHouses]
+ AS SUBSET(ORDER([DIM HOUSE].[HOUSE ID].MEMBERS, [Measures].[Price], DESC), 0, 10);     
+
+/* Dynamic Set: Combined Houses (Top and Bottom Sum by Price) */
+CREATE DYNAMIC SET CURRENTCUBE.[CombinedHouses1]
+AS UNION(
+    TOPSUM([DIM HOUSE].[HOUSE ID].MEMBERS, [Measures].[Price], 500000),
+    BOTTOMSUM([DIM HOUSE].[HOUSE ID].MEMBERS, [Measures].[Price], 200000)
+);     
+
+/* Dynamic Set: Top 3 Houses per District with Area &lt; 50 */
+CREATE DYNAMIC SET CURRENTCUBE.[top3district50]
+AS GENERATE(
+    [DIM HOUSE].[DISTRICT].CHILDREN,
+    TOPCOUNT(
+        FILTER(
+            [DIM HOUSE].[HOUSE ID].MEMBERS * [DIM HOUSE].[DISTRICT].CURRENTMEMBER,
+            [MEASURES].[AREA] &lt; 50
+        ),
+        3,
+        [MEASURES].[TOTALPRICE]
+    )
+);     
+
+/* Dynamic Set: Houses with Total Price in Range and Bedrooms &gt; 3 */
+CREATE DYNAMIC SET CURRENTCUBE.[totalprice2between8numberofbedroom3]
+AS FILTER(
+    [DIM HOUSE].[HOUSE ID].MEMBERS,
+    [Measures].[TOTALPRICE] &gt;= 2000000 AND
+    [Measures].[TOTALPRICE] &lt;= 8000000 AND
+    [DIM HOUSE].[NUMBER OF BEDROOMS].CURRENTMEMBER.MEMBER_VALUE &gt; 3
+);     
+
+/* Dynamic Set: Top 1 House by Price */
+CREATE DYNAMIC SET CURRENTCUBE.[topcounthouseprice]
+AS TOPCOUNT(
+    ORDER(
+        EXCEPT([DIM HOUSE].[HOUSE ID].MEMBERS, {[DIM HOUSE].[HOUSE ID].[ALL]}),
+        [MEASURES].[PRICE],
+        DESC
+    ),
+    1
+);     
+
+/* Dynamic Set: Top 5 Percent of Houses in Hanoi */
+CREATE DYNAMIC SET CURRENTCUBE.[TOP5PRICEHOUSE]
+ AS INTERSECT(TOPPERCENT(EXCEPT([DIM HOUSE].[HOUSE ID].MEMBERS,{[DIM HOUSE].[HOUSE ID].[ALL]}), 5, [Measures].[Price]),FILTER(
+            [DIM HOUSE].[HOUSE ID].MEMBERS,
+            [DIM HOUSE].[PROVINCE].CurrentMember.Name = "Hà Nội"
+        ));    
+CREATE DYNAMIC SET CURRENTCUBE.[co_so_an_dim_vuong]
+ AS FILTER ([DIM HOUSE].[HOUSE ID].CHILDREN,
+	 [DIM LEGAL DOCUMENTS].[PAPERS].&amp;[Đã có sổ] AND 
+[DIM HOUSE].[Hierarchy].[ROAD].&amp;[Đường 14]&amp;[Phường Mai Động]&amp;[Quận Hoàng Mai]&amp;[Hà Nội].&amp;[Phường Mai Động]&amp;[Quận Hoàng Mai]&amp;[Hà Nội]);     
+
+/* Calculated Member: Average Price per Square Meter */
+CREATE MEMBER CURRENTCUBE.[Measures].[AVGPRICEPERSQUAREMETER]
+AS AVG(
+    NONEMPTY(
+        [DIM HOUSE].[HOUSE ID].MEMBERS,
+        [Measures].[Price]
+    ),
+    [Measures].[Price]
+),
+VISIBLE = 1;     
+
+/* Calculated Member: Total Price */
+CREATE MEMBER CURRENTCUBE.[Measures].[TOTALPRICE]
+AS [MEASURES].[PRICE] * [MEASURES].[AREA],
+VISIBLE = 1;     
+
+/* Dynamic Set: Top 10 Houses in Hanoi by Price */
+CREATE DYNAMIC SET CURRENTCUBE.[Top10HouseHaNoiSubset]
+AS SUBSET(
+    ORDER([DIM HOUSE].[HOUSE ID].MEMBERS, [Measures].[Price], DESC),
+    0,
+    10
+);     
+
+/* Dynamic Set: Eligible Houses with Area &gt; 120 and Total Price &lt; 50000 */
+CREATE DYNAMIC SET CURRENTCUBE.[EligibleHouses]
+AS FILTER(
+    NONEMPTY(
+        [DIM HOUSE].[HOUSE ID].MEMBERS,
+        [Measures].[Area]
+    ),
+    [Measures].[Area] &gt; 120 AND
+    [MEASURES].[TOTALPRICE] &lt; 50000
+);     
+
+/* Dynamic Set: Bottom 10 Expensive Houses per District */
+CREATE DYNAMIC SET CURRENTCUBE.[BottomExpensiveByDistrict]
+AS GENERATE(
+    [DIM HOUSE].[DISTRICT].MEMBERS,
+    BOTTOMCOUNT(
+        FILTER(
+            [DIM HOUSE].[HOUSE ID].MEMBERS,
+            [MEASURES].[AREA] &gt; 200 AND
+            [DIM HOUSE].[NUMBER OF BEDROOMS].CURRENTMEMBER IS [DIM HOUSE].[NUMBER OF BEDROOMS].&amp;[4] AND
+            [Measures].[TOTALPRICE] &gt; 0
+        ),
+        10,
+        [MEASURES].[TOTALPRICE]
+    )
+);     
+
+/* Dynamic Set: Top 10 Expensive Houses */
+CREATE DYNAMIC SET CURRENTCUBE.[TopExpensiveHouses]
+AS TOPCOUNT(
+    NONEMPTY(
+        FILTER(
+            [DIM HOUSE].[HOUSE ID].MEMBERS,
+            [MEASURES].[AREA] &gt; 200 AND
+            [DIM HOUSE].[NUMBER OF BEDROOMS].CURRENTMEMBER IS [DIM HOUSE].[NUMBER OF BEDROOMS].&amp;[4]
+        ),
+        [MEASURES].[TOTALPRICE]
+    ),
+    10,
+    [MEASURES].[TOTALPRICE]
+); </Text>
+            </Command>
+          </Commands>
+        </MdxScript>
+      </MdxScripts>
+    </Cube>
+  </Cubes>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>House DW</ID>
+      <Name>House DW</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <ConnectionString>Provider=SQLOLEDB.1;Data Source=DESKTOP-10VSN47;Integrated Security=SSPI;Initial Catalog=House_DW</ConnectionString>
+      <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>House DW</ID>
+      <Name>House DW</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout />
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>0</DiagramViewPortLeft>
+                <DiagramViewPortTop>0</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>100</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>House DW</DataSourceID>
+      <Schema>
+        <xs:schema id="House_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="House_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="99b66c31-f411-4a27-83e5-8cb5f6244b84">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="dbo_DIM_DATE" msprop:design-time-name="80bd73c0-4b52-46f2-bd0a-c46c814e8eb5" msprop:FriendlyName="DIM_DATE" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_DATE">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="DATE_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="DATE_ID" msprop:DbColumnName="DATE_ID" msprop:design-time-name="60ba9b04-f7ba-4485-af25-b62d76b8ad29" type="xs:int" />
+                      <xs:element name="DAY_HOUSE" msprop:FriendlyName="DAY_HOUSE" msprop:DbColumnName="DAY_HOUSE" msprop:design-time-name="6ab4d6e5-8191-4057-adc1-d3632a55ab12" type="xs:int" minOccurs="0" />
+                      <xs:element name="MONTH_HOUSE" msprop:FriendlyName="MONTH_HOUSE" msprop:DbColumnName="MONTH_HOUSE" msprop:design-time-name="9704bdce-e342-40fd-a3a1-bd78aa860f27" type="xs:int" minOccurs="0" />
+                      <xs:element name="QUARTER_HOUSE" msprop:FriendlyName="QUARTER_HOUSE" msprop:DbColumnName="QUARTER_HOUSE" msprop:design-time-name="5d95041b-7fb9-44ff-bac4-6ef6f40a194b" type="xs:short" minOccurs="0" />
+                      <xs:element name="YEAR_HOUSE" msprop:FriendlyName="YEAR_HOUSE" msprop:DbColumnName="YEAR_HOUSE" msprop:design-time-name="44332c60-f3e2-440a-8884-d6d4f5e879c0" type="xs:int" minOccurs="0" />
+                      <xs:element name="WEEK_OF_YEAR" msprop:FriendlyName="WEEK_OF_YEAR" msprop:DbColumnName="WEEK_OF_YEAR" msprop:design-time-name="165f076c-8d62-4bbe-9668-026867566000" type="xs:int" minOccurs="0" />
+                      <xs:element name="DAY_OF_WEEK" msprop:FriendlyName="DAY_OF_WEEK" msprop:DbColumnName="DAY_OF_WEEK" msprop:design-time-name="5ab6d960-f611-46e5-9506-d1db88acc700" type="xs:int" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DIM_HOUSE" msprop:design-time-name="e90f937d-f565-4466-a3e4-0b9977c74148" msprop:FriendlyName="DIM_HOUSE" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_HOUSE">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="HOUSE_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="HOUSE_ID" msprop:DbColumnName="HOUSE_ID" msprop:design-time-name="0e13dd2e-3d82-47f1-8576-e2364cb71583" type="xs:int" />
+                      <xs:element name="TYPE_OF_HOUSING" msprop:FriendlyName="TYPE_OF_HOUSING" msprop:DbColumnName="TYPE_OF_HOUSING" msprop:design-time-name="9f67909c-c9c1-4869-9bb6-8f6e80ff6961" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="NUMBER_OF_FLOORS" msprop:FriendlyName="NUMBER_OF_FLOORS" msprop:DbColumnName="NUMBER_OF_FLOORS" msprop:design-time-name="f95f5298-80cb-4117-9877-8af2a4126c49" type="xs:int" minOccurs="0" />
+                      <xs:element name="NUMBER_OF_BEDROOMS" msprop:FriendlyName="NUMBER_OF_BEDROOMS" msprop:DbColumnName="NUMBER_OF_BEDROOMS" msprop:design-time-name="360ac9e0-9a01-4b1f-9aed-78ba69a84f7b" type="xs:short" minOccurs="0" />
+                      <xs:element name="LOCATION_ID" msprop:FriendlyName="LOCATION_ID" msprop:DbColumnName="LOCATION_ID" msprop:design-time-name="f851a351-2137-4364-9b18-28d1fe079089" type="xs:int" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_DIM_LEGAL_DOCUMENTS" msprop:design-time-name="f91c48f2-37c7-4be0-8c0a-6f081673f9ec" msprop:FriendlyName="DIM_LEGAL_DOCUMENTS" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="DIM_LEGAL_DOCUMENTS">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="PAPERS_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="PAPERS_ID" msprop:DbColumnName="PAPERS_ID" msprop:design-time-name="339759c0-1d76-4628-9621-82600c757ac9" type="xs:int" />
+                      <xs:element name="PAPERS" msprop:FriendlyName="PAPERS" msprop:DbColumnName="PAPERS" msprop:design-time-name="2c4fa039-b4dc-43d8-9916-2387e90b12e3" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_FACT" msprop:design-time-name="dc338fd6-a746-41bd-985e-37f857d31a8a" msprop:FriendlyName="FACT" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="FACT">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="FACT_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="FACT_ID" msprop:DbColumnName="FACT_ID" msprop:design-time-name="bb0e4017-b686-4111-a3cb-f18a97259378" type="xs:int" />
+                      <xs:element name="Area" msprop:FriendlyName="Area" msprop:DbColumnName="Area" msprop:design-time-name="22ce2806-b03c-4c23-965c-2f3725664cde" type="xs:double" minOccurs="0" />
+                      <xs:element name="Price" msprop:FriendlyName="Price" msprop:DbColumnName="Price" msprop:design-time-name="11799dbe-e479-447b-8a6b-55d3cb741bc2" type="xs:double" minOccurs="0" />
+                      <xs:element name="Long" msprop:FriendlyName="Long" msprop:DbColumnName="Long" msprop:design-time-name="05c4cf4c-17c8-403b-a931-41205561733c" type="xs:double" minOccurs="0" />
+                      <xs:element name="Width" msprop:FriendlyName="Width" msprop:DbColumnName="Width" msprop:design-time-name="eaf6aa42-b09c-49bf-9136-45029cf8f9fc" type="xs:double" minOccurs="0" />
+                      <xs:element name="DATE_ID" msprop:FriendlyName="DATE_ID" msprop:DbColumnName="DATE_ID" msprop:design-time-name="d8af06a1-e5a1-44ea-9250-ae3a98d8c87d" type="xs:int" minOccurs="0" />
+                      <xs:element name="PAPERS_ID" msprop:FriendlyName="PAPERS_ID" msprop:DbColumnName="PAPERS_ID" msprop:design-time-name="a9642e48-d87c-42f2-9a38-79f17939bb4c" type="xs:int" minOccurs="0" />
+                      <xs:element name="HOUSE_ID" msprop:FriendlyName="HOUSE_ID" msprop:DbColumnName="HOUSE_ID" msprop:design-time-name="57aca6bf-a61a-4c29-9e4a-7243c4ed1e9c" type="xs:int" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_LOCATION_HOUSE" msprop:design-time-name="426bd86d-7854-44aa-8b5e-50759f5c9663" msprop:FriendlyName="LOCATION_HOUSE" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:DbTableName="LOCATION_HOUSE">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="LOCATION_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="LOCATION_ID" msprop:DbColumnName="LOCATION_ID" msprop:design-time-name="17e4acbf-e49f-4c5d-8256-3c31269a96ee" type="xs:int" />
+                      <xs:element name="ROAD" msprop:FriendlyName="ROAD" msprop:DbColumnName="ROAD" msprop:design-time-name="b94e119c-1b45-4db3-a50c-a775cd0a1f68" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="555" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="WARD" msprop:FriendlyName="WARD" msprop:DbColumnName="WARD" msprop:design-time-name="fe2a7956-14e4-4114-91ee-284f5d54cdf6" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="DISTRICT" msprop:FriendlyName="DISTRICT" msprop:DbColumnName="DISTRICT" msprop:design-time-name="8d7c3393-be5b-4fc0-b701-86ecc9dc5355" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="PROVINCE" msprop:FriendlyName="PROVINCE" msprop:DbColumnName="PROVINCE" msprop:design-time-name="c7b2f007-5b21-458b-b3c4-0ef585db0148" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="6" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+            <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DIM_DATE" />
+              <xs:field xpath="DATE_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DIM_HOUSE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DIM_HOUSE" />
+              <xs:field xpath="HOUSE_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_DIM_LEGAL_DOCUMENTS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_DIM_LEGAL_DOCUMENTS" />
+              <xs:field xpath="PAPERS_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_FACT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_FACT" />
+              <xs:field xpath="FACT_ID" />
+            </xs:unique>
+            <xs:unique name="dbo_LOCATION_HOUSE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_LOCATION_HOUSE" />
+              <xs:field xpath="LOCATION_ID" />
+            </xs:unique>
+            <xs:keyref name="PAPERS_ID_fk" refer="dbo_DIM_LEGAL_DOCUMENTS_Constraint1">
+              <xs:selector xpath=".//dbo_FACT" />
+              <xs:field xpath="PAPERS_ID" />
+            </xs:keyref>
+            <xs:keyref name="DATE_ID_fk" refer="Constraint1">
+              <xs:selector xpath=".//dbo_FACT" />
+              <xs:field xpath="DATE_ID" />
+            </xs:keyref>
+            <xs:keyref name="HOUSE_ID_fk" refer="dbo_DIM_HOUSE_Constraint1">
+              <xs:selector xpath=".//dbo_FACT" />
+              <xs:field xpath="HOUSE_ID" />
+            </xs:keyref>
+            <xs:keyref name="LOCATION_ID_fk" refer="dbo_LOCATION_HOUSE_Constraint1">
+              <xs:selector xpath=".//dbo_DIM_HOUSE" />
+              <xs:field xpath="LOCATION_ID" />
+            </xs:keyref>
+          </xs:element>
+        </xs:schema>
+        <House_x0020_DW xmlns="" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>

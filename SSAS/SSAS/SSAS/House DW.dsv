@@ -1,0 +1,183 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c1f021aa-2193-41bb-99e2-f9c5038e6152" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>House DW</ID>
+  <Name>House DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>House DW</DataSourceID>
+  <Schema>
+    <xs:schema id="House_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="House_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="99b66c31-f411-4a27-83e5-8cb5f6244b84">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_DIM_DATE" msprop:DbTableName="DIM_DATE" msprop:FriendlyName="DIM_DATE" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="80bd73c0-4b52-46f2-bd0a-c46c814e8eb5">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DATE_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="DATE_ID" msprop:DbColumnName="DATE_ID" msprop:design-time-name="60ba9b04-f7ba-4485-af25-b62d76b8ad29" type="xs:int" />
+                  <xs:element name="DAY_HOUSE" msprop:FriendlyName="DAY_HOUSE" msprop:DbColumnName="DAY_HOUSE" msprop:design-time-name="6ab4d6e5-8191-4057-adc1-d3632a55ab12" type="xs:int" minOccurs="0" />
+                  <xs:element name="MONTH_HOUSE" msprop:FriendlyName="MONTH_HOUSE" msprop:DbColumnName="MONTH_HOUSE" msprop:design-time-name="9704bdce-e342-40fd-a3a1-bd78aa860f27" type="xs:int" minOccurs="0" />
+                  <xs:element name="QUARTER_HOUSE" msprop:FriendlyName="QUARTER_HOUSE" msprop:DbColumnName="QUARTER_HOUSE" msprop:design-time-name="5d95041b-7fb9-44ff-bac4-6ef6f40a194b" type="xs:short" minOccurs="0" />
+                  <xs:element name="YEAR_HOUSE" msprop:FriendlyName="YEAR_HOUSE" msprop:DbColumnName="YEAR_HOUSE" msprop:design-time-name="44332c60-f3e2-440a-8884-d6d4f5e879c0" type="xs:int" minOccurs="0" />
+                  <xs:element name="WEEK_OF_YEAR" msprop:FriendlyName="WEEK_OF_YEAR" msprop:DbColumnName="WEEK_OF_YEAR" msprop:design-time-name="165f076c-8d62-4bbe-9668-026867566000" type="xs:int" minOccurs="0" />
+                  <xs:element name="DAY_OF_WEEK" msprop:FriendlyName="DAY_OF_WEEK" msprop:DbColumnName="DAY_OF_WEEK" msprop:design-time-name="5ab6d960-f611-46e5-9506-d1db88acc700" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_HOUSE" msprop:DbTableName="DIM_HOUSE" msprop:FriendlyName="DIM_HOUSE" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="e90f937d-f565-4466-a3e4-0b9977c74148">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="HOUSE_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="HOUSE_ID" msprop:DbColumnName="HOUSE_ID" msprop:design-time-name="0e13dd2e-3d82-47f1-8576-e2364cb71583" type="xs:int" />
+                  <xs:element name="TYPE_OF_HOUSING" msprop:FriendlyName="TYPE_OF_HOUSING" msprop:DbColumnName="TYPE_OF_HOUSING" msprop:design-time-name="9f67909c-c9c1-4869-9bb6-8f6e80ff6961" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMBER_OF_FLOORS" msprop:FriendlyName="NUMBER_OF_FLOORS" msprop:DbColumnName="NUMBER_OF_FLOORS" msprop:design-time-name="f95f5298-80cb-4117-9877-8af2a4126c49" type="xs:int" minOccurs="0" />
+                  <xs:element name="NUMBER_OF_BEDROOMS" msprop:FriendlyName="NUMBER_OF_BEDROOMS" msprop:DbColumnName="NUMBER_OF_BEDROOMS" msprop:design-time-name="360ac9e0-9a01-4b1f-9aed-78ba69a84f7b" type="xs:short" minOccurs="0" />
+                  <xs:element name="LOCATION_ID" msprop:FriendlyName="LOCATION_ID" msprop:DbColumnName="LOCATION_ID" msprop:design-time-name="f851a351-2137-4364-9b18-28d1fe079089" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DIM_LEGAL_DOCUMENTS" msprop:DbTableName="DIM_LEGAL_DOCUMENTS" msprop:FriendlyName="DIM_LEGAL_DOCUMENTS" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="f91c48f2-37c7-4be0-8c0a-6f081673f9ec">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PAPERS_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="PAPERS_ID" msprop:DbColumnName="PAPERS_ID" msprop:design-time-name="339759c0-1d76-4628-9621-82600c757ac9" type="xs:int" />
+                  <xs:element name="PAPERS" msprop:FriendlyName="PAPERS" msprop:DbColumnName="PAPERS" msprop:design-time-name="2c4fa039-b4dc-43d8-9916-2387e90b12e3" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FACT" msprop:DbTableName="FACT" msprop:FriendlyName="FACT" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="dc338fd6-a746-41bd-985e-37f857d31a8a">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FACT_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="FACT_ID" msprop:DbColumnName="FACT_ID" msprop:design-time-name="bb0e4017-b686-4111-a3cb-f18a97259378" type="xs:int" />
+                  <xs:element name="Area" msprop:FriendlyName="Area" msprop:DbColumnName="Area" msprop:design-time-name="22ce2806-b03c-4c23-965c-2f3725664cde" type="xs:double" minOccurs="0" />
+                  <xs:element name="Price" msprop:FriendlyName="Price" msprop:DbColumnName="Price" msprop:design-time-name="11799dbe-e479-447b-8a6b-55d3cb741bc2" type="xs:double" minOccurs="0" />
+                  <xs:element name="Long" msprop:FriendlyName="Long" msprop:DbColumnName="Long" msprop:design-time-name="05c4cf4c-17c8-403b-a931-41205561733c" type="xs:double" minOccurs="0" />
+                  <xs:element name="Width" msprop:FriendlyName="Width" msprop:DbColumnName="Width" msprop:design-time-name="eaf6aa42-b09c-49bf-9136-45029cf8f9fc" type="xs:double" minOccurs="0" />
+                  <xs:element name="DATE_ID" msprop:FriendlyName="DATE_ID" msprop:DbColumnName="DATE_ID" msprop:design-time-name="d8af06a1-e5a1-44ea-9250-ae3a98d8c87d" type="xs:int" minOccurs="0" />
+                  <xs:element name="PAPERS_ID" msprop:FriendlyName="PAPERS_ID" msprop:DbColumnName="PAPERS_ID" msprop:design-time-name="a9642e48-d87c-42f2-9a38-79f17939bb4c" type="xs:int" minOccurs="0" />
+                  <xs:element name="HOUSE_ID" msprop:FriendlyName="HOUSE_ID" msprop:DbColumnName="HOUSE_ID" msprop:design-time-name="57aca6bf-a61a-4c29-9e4a-7243c4ed1e9c" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_LOCATION_HOUSE" msprop:DbTableName="LOCATION_HOUSE" msprop:FriendlyName="LOCATION_HOUSE" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="426bd86d-7854-44aa-8b5e-50759f5c9663">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LOCATION_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="LOCATION_ID" msprop:DbColumnName="LOCATION_ID" msprop:design-time-name="17e4acbf-e49f-4c5d-8256-3c31269a96ee" type="xs:int" />
+                  <xs:element name="ROAD" msprop:FriendlyName="ROAD" msprop:DbColumnName="ROAD" msprop:design-time-name="b94e119c-1b45-4db3-a50c-a775cd0a1f68" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="555" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WARD" msprop:FriendlyName="WARD" msprop:DbColumnName="WARD" msprop:design-time-name="fe2a7956-14e4-4114-91ee-284f5d54cdf6" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISTRICT" msprop:FriendlyName="DISTRICT" msprop:DbColumnName="DISTRICT" msprop:design-time-name="8d7c3393-be5b-4fc0-b701-86ecc9dc5355" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PROVINCE" msprop:FriendlyName="PROVINCE" msprop:DbColumnName="PROVINCE" msprop:design-time-name="c7b2f007-5b21-458b-b3c4-0ef585db0148" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_DATE" />
+          <xs:field xpath="DATE_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_HOUSE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_HOUSE" />
+          <xs:field xpath="HOUSE_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_DIM_LEGAL_DOCUMENTS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DIM_LEGAL_DOCUMENTS" />
+          <xs:field xpath="PAPERS_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_FACT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="FACT_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_LOCATION_HOUSE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_LOCATION_HOUSE" />
+          <xs:field xpath="LOCATION_ID" />
+        </xs:unique>
+        <xs:keyref name="HOUSE_ID_fk" refer="dbo_DIM_HOUSE_Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="HOUSE_ID" />
+        </xs:keyref>
+        <xs:keyref name="DATE_ID_fk" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="DATE_ID" />
+        </xs:keyref>
+        <xs:keyref name="PAPERS_ID_fk" refer="dbo_DIM_LEGAL_DOCUMENTS_Constraint1">
+          <xs:selector xpath=".//dbo_FACT" />
+          <xs:field xpath="PAPERS_ID" />
+        </xs:keyref>
+        <xs:keyref name="LOCATION_ID_fk" refer="dbo_LOCATION_HOUSE_Constraint1">
+          <xs:selector xpath=".//dbo_DIM_HOUSE" />
+          <xs:field xpath="LOCATION_ID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <House_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>

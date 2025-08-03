@@ -1,0 +1,385 @@
+﻿--1 Truy vấn xu hướng giá trung bình hàng năm của bất động sản Hà Nội. ( cos the bo cau 5)
+WITH 
+    MEMBER [Measures].[AVGPRICE] AS 
+        AVG(
+            NONEMPTY(
+                [DIM HOUSE].[HOUSE ID].MEMBERS, 
+                [Measures].[Price]
+            ),
+            [Measures].[Price]
+        )
+
+SELECT 
+    NON EMPTY {[DIM DATE].[YEAR HOUSE].MEMBERS} ON COLUMNS,
+    {[Measures].[AVGPRICE]} ON ROWS
+FROM [HOUSE DW]
+
+
+--2 Truy vấn giá bất động sản trung bình theo loại hình (nhà, căn hộ, biệt thự) 2019. 
+WITH 
+    MEMBER [Measures].[AVGPRICE] AS 
+        AVG(
+            NONEMPTY(
+                [DIM HOUSE].[HOUSE ID].MEMBERS, 
+                [Measures].[Price]
+            ),
+            [Measures].[Price]
+        )
+SELECT { EXCEPT([DIM HOUSE].[TYPE OF HOUSING].MEMBERS,{[DIM HOUSE].[TYPE OF HOUSING].[ALL]})} ON ROWS,
+		{[Measures].[AVGPRICE]} ON COLUMNS
+FROM [HOUSE DW]
+WHERE ([DIM DATE].[YEAR HOUSE].&[2019]);
+--------------------------------------------------------------------------------
+WITH 
+    MEMBER [Measures].[AVGPRICEPERSQUAREMETER] AS 
+        AVG(
+            NONEMPTY(
+                [DIM HOUSE].[HOUSE ID].MEMBERS,
+                [Measures].[Price]
+            ),
+            [Measures].[Price]
+        )
+
+SELECT 
+    {[Measures].[AVGPRICEPERSQUAREMETER]} ON COLUMNS,
+    EXCEPT(
+        [DIM HOUSE].[TYPE OF HOUSING].MEMBERS, 
+        {[DIM HOUSE].[TYPE OF HOUSING].[ALL]}
+    ) ON ROWS
+FROM [HOUSE DW]
+WHERE ([DIM DATE].[YEAR HOUSE].&[2019]);
+
+--3 Truy vấn các bất động sản giá từ 2 tỷ đến 8 tỷ với ít nhất 3 phòng ngủ.
+WITH MEMBER [MEASURES].[TOTALPRICE] AS 
+	[MEASURES].[PRICE]*[MEASURES].[AREA]
+SELECT 
+    {
+        [Measures].[Area], 
+        [Measures].[TOTALPRICE]
+    } ON COLUMNS,
+
+    NON EMPTY 
+		FILTER(
+			[DIM HOUSE].[HOUSE ID].MEMBERS, 
+			[Measures].[TOTALPRICE] >= 2000 AND 
+			[Measures].[TOTALPRICE] <= 8000 AND 
+			[DIM HOUSE].[NUMBER OF BEDROOMS].CURRENTMEMBER > 3
+		) ON ROWS
+FROM 
+    [HOUSE DW] ;
+
+--4 Nhà ở có giá/m² có giá đắt nhất, thấp nhất Hà Nội. (giá trị trên một mét vuông)
+	SELECT {[MEASURES].[PRICE]} ON COLUMNS,
+		TOPCOUNT(
+			ORDER(
+				EXCEPT([DIM HOUSE].[HOUSE ID].MEMBERS,{[DIM HOUSE].[HOUSE ID].[ALL]}),
+				[MEASURES].[PRICE],
+				DESC
+			),
+			1
+		) ON ROWS
+FROM [HOUSE DW]
+
+--5 Truy vấn các bất động sản có diện tích trên 120m² và giá dưới 5 tỷ đồng.
+WITH 
+    MEMBER [MEASURES].[TOTALPRICE] AS 
+        [MEASURES].[PRICE] * [MEASURES].[AREA]
+
+	 SET [EligibleHouse1s] AS 
+        FILTER(
+            NONEMPTY(
+                {[DIM HOUSE].[HOUSE ID].CHILDREN}
+            ),
+            [Measures].[Area] > 120 AND 
+            [MEASURES].[TOTALPRICE] < 50000
+        )
+
+SELECT 
+    {[Measures].[Area], [Measures].[TOTALPRICE]} ON COLUMNS,
+    [EligibleHouses]*{[DIM HOUSE].[Hierarchy].children} ON ROWS
+FROM [HOUSE DW];
+
+--6 Truy vấn giá trung bình của các bất động sản theo quận trong năm gần đây nhất. (chia theo quận theo năm gần nhất - 2020)
+
+WITH 
+    MEMBER [Measures].[AVGPRICEPERSQUAREMETER] AS 
+        AVG(
+            NONEMPTY(
+                [DIM HOUSE].[HOUSE ID].MEMBERS,
+                [Measures].[Price]
+            ),
+            [Measures].[Price]
+        )
+
+SELECT 
+    {[DIM HOUSE].[DISTRICT].CHILDREN} ON ROWS,
+    {[Measures].[AVGPRICEPERSQUAREMETER]} ON COLUMNS
+FROM [HOUSE DW]
+WHERE ([DIM DATE].[YEAR HOUSE].&[2020]);
+
+--7 Truy vấn 10 bất động sản có giá cao nhất - thấp nhất, cùng thông tin về diện tích > 200 và số phòng ngủ 4.
+	-- CAO NHAT MOI DUONG
+WITH 
+    MEMBER [MEASURES].[TOTALPRICE] AS 
+        [MEASURES].[PRICE] * [MEASURES].[AREA]
+
+    SET [TopExpensiveHouses1] AS 
+        TOPCOUNT(
+            NONEMPTY(
+                FILTER(
+                    [DIM HOUSE].[HOUSE ID].MEMBERS,
+                    [MEASURES].[AREA] > 200 AND 
+                    [DIM HOUSE].[NUMBER OF BEDROOMS].&[4]
+                ),
+                [MEASURES].[TOTALPRICE]
+            ),
+            10,
+            [MEASURES].[TOTALPRICE]
+        )
+
+SELECT 
+    {[MEASURES].[PRICE], [MEASURES].[AREA], [MEASURES].[TOTALPRICE]} ON COLUMNS,
+    [TopExpensiveHouses] ON ROWS
+FROM [HOUSE DW];
+
+ --THAPNHAT
+WITH MEMBER [MEASURES].[TOTALPRICE] AS 
+    [MEASURES].[PRICE] * [MEASURES].[AREA]
+SELECT 
+    {[MEASURES].[PRICE], [MEASURES].[AREA], [MEASURES].[TOTALPRICE]} ON COLUMNS, // Thêm TOTALPRICE vào cột
+    TOPCOUNT(
+        ORDER(
+            FILTER(
+                EXCEPT([DIM HOUSE].[HOUSE ID].MEMBERS,{[DIM HOUSE].[HOUSE ID].[ALL]}),  
+                [MEASURES].[AREA] > 200  
+            ),
+            [MEASURES].[TOTALPRICE],
+            DESC
+        ),
+        3,
+        [MEASURES].[TOTALPRICE]
+    ) ON ROWS 
+FROM [HOUSE DW]
+WHERE [DIM HOUSE].[NUMBER OF BEDROOMS].&[4]
+
+---------------------------------------------------
+WITH 
+    MEMBER [MEASURES].[TOTALPRICE] AS 
+        [MEASURES].[PRICE] * [MEASURES].[AREA]
+
+    SET [BottomExpensiveByDistrict1] AS 
+        GENERATE(
+            [DIM HOUSE].[DISTRICT].MEMBERS,
+            BOTTOMCOUNT(
+                FILTER(
+                    [DIM HOUSE].[HOUSE ID].MEMBERS,
+                    [MEASURES].[AREA] > 200 AND 
+                    [DIM HOUSE].[NUMBER OF BEDROOMS].&[4]
+                ),
+                10,
+                [MEASURES].[TOTALPRICE]
+            )
+        )
+
+SELECT 
+    {[MEASURES].[PRICE], [MEASURES].[AREA], [MEASURES].[TOTALPRICE]} ON COLUMNS,
+    [BottomExpensiveByDistrict] ON ROWS
+FROM [HOUSE DW];
+
+
+--8 Truy vấn các bất động sản nhỏ hơn 50m² nhưng có giá top 3 cua tung quận.
+WITH MEMBER [MEASURES].[TOTALPRICE] AS 
+	[MEASURES].[PRICE]*[MEASURES].[AREA]
+SELECT {[MEASURES].[AREA],[MEASURES].[PRICE]} ON COLUMNS,
+	GENERATE(
+		[DIM HOUSE].[DISTRICT].CHILDREN,
+
+		TOPCOUNT(
+			FILTER(
+			{[DIM HOUSE].[HOUSE ID].CHILDREN}*{[DIM HOUSE].[DISTRICT].CURRENTMEMBER},
+			[MEASURES].[AREA] < 50
+			),
+			3,
+			[MEASURES].[TOTALPRICE]
+		)
+	) ON ROWS 
+FROM [HOUSE DW]
+
+-- 9 Truy vấn này lấy ra 10 bất động sản có giá cao nhất tại Hà Nội.
+WITH 
+    SET OrderedHouses AS 
+        ORDER([DIM HOUSE].[HOUSE ID].MEMBERS, [Measures].[Price], DESC)
+SELECT 
+    {[Measures].[Price]} ON COLUMNS,
+    SUBSET(OrderedHouses, 0, 10) ON ROWS
+FROM [HOUSE DW]
+
+
+-- 10 Truy vấn này lấy các bất động sản thuộc top giá cao nhất với tổng là 50 triệu và giá thấp nhất với tổng là 20 triệu.
+WITH 
+    SET TopExpensiveHouses501 AS 
+        TOPSUM([DIM HOUSE].[HOUSE ID].MEMBERS, [Measures].[Price],500000)
+    SET BottomExpensiveHouses203 AS 
+        BOTTOMSUM([DIM HOUSE].[HOUSE ID].MEMBERS, [Measures].[Price],200000)
+    SET CombinedHouses3 AS 
+        UNION(TopExpensiveHouses501, BottomExpensiveHouses)
+SELECT 
+    {[Measures].[Price]} ON COLUMNS,
+    CombinedHouses3 ON ROWS
+FROM [HOUSE DW];
+
+-- 11 Truy vấn này lấy 5% căn hộ có giá cao nhất tại Hà Nội.
+WITH 
+    SET ExpensiveApartments AS 
+        TOPPERCENT(EXCEPT([DIM HOUSE].[HOUSE ID].MEMBERS,{[DIM HOUSE].[HOUSE ID].[ALL]}), 5, [Measures].[Price])
+    SET ApartmentsInHanoi AS 
+        FILTER(
+            [DIM HOUSE].[HOUSE ID].MEMBERS,
+            [DIM HOUSE].[PROVINCE].CurrentMember.Name = "Hà Nội"
+        )
+SELECT 
+    {[Measures].[Price]} ON COLUMNS,
+    INTERSECT(ExpensiveApartments, ApartmentsInHanoi) ON ROWS
+FROM [HOUSE DW];
+
+
+-- 12 Số lượng nhà có sổ ở Đường An Dương Vương 
+SELECT 
+	 FILTER ([DIM HOUSE].[HOUSE ID].CHILDREN,
+	 [DIM LEGAL DOCUMENTS].[PAPERS].&[Đã có sổ] AND 
+	 [DIM HOUSE].[Hierarchy].[ROAD].&[Đường 14]&[Phường Mai Động]&[Quận Hoàng Mai]&[Hà Nội].&[Phường Mai Động]&[Quận Hoàng Mai]&[Hà Nội]) ON ROWS,
+	 [Measures].[TOTALPRICE] ON COLUMNS
+FROM [HOUSE DW]
+
+--15 Nhà ở có giá trị lớn nhất, trong Phường có giá trị trung bình lớn nhất, của Quận có giá trị trung bình lớn nhất.
+
+
+----=------------------------------ KIEM TRA GIA TRI NHA 
+WITH 
+MEMBER [Measures].[HOUSE_VALUE] AS 
+    [Measures].[PRICE] * [Measures].[AREA]
+
+SELECT 
+    {[Measures].[HOUSE_VALUE]} ON COLUMNS,
+    [DIM HOUSE].[HOUSE ID].MEMBERS ON ROWS
+FROM [HOUSE DW];
+------------------------------------KIEM TRA GIA TRI TRUNG BINH THEO QUAN
+WITH 
+MEMBER [Measures].[HOUSE_VALUE] AS 
+    [Measures].[PRICE] * [Measures].[AREA]
+MEMBER [Measures].[DISTRICT_AVG_VALUE] AS 
+    AVG(
+        [DIM HOUSE].[HOUSE ID].MEMBERS,
+        [Measures].[HOUSE_VALUE]
+    )
+
+SELECT 
+    {[Measures].[DISTRICT_AVG_VALUE]} ON COLUMNS,
+    [DIM HOUSE].[DISTRICT].MEMBERS ON ROWS
+FROM [HOUSE DW];
+-----------------------------------------KIEM TRA QUAN CO GIA TRI NHA O LON NHAT
+	WITH 
+	MEMBER [Measures].[HOUSE_VALUE] AS 
+		[Measures].[PRICE] * [Measures].[AREA]
+	MEMBER [Measures].[DISTRICT_AVG_VALUE] AS 
+		AVG(
+			[DIM HOUSE].[HOUSE ID].MEMBERS,
+			[Measures].[HOUSE_VALUE]
+		)
+	SELECT 
+		{[Measures].[DISTRICT_AVG_VALUE]} ON COLUMNS,
+				TOPCOUNT(
+				ORDER(
+					EXCEPT([DIM HOUSE].[DISTRICT].MEMBERS,{[DIM HOUSE].[DISTRICT].[ALL]}),
+					[Measures].[DISTRICT_AVG_VALUE],
+					DESC
+				),
+				1
+			) ON ROWS
+	FROM [HOUSE DW];
+-------------------------------------------------- KIEM TRA GIA TRI TRUNG BINH THEO PHUONG cua quan lon nhat 
+WITH 
+MEMBER [Measures].[HOUSE_VALUE] AS 
+    [Measures].[PRICE] * [Measures].[AREA]
+
+MEMBER [Measures].[DISTRICT_AVG_VALUE] AS 
+    AVG(
+        [DIM HOUSE].[HOUSE ID].ALLMEMBERS,
+        [Measures].[HOUSE_VALUE]
+    )
+
+SELECT 
+    {[Measures].[DISTRICT_AVG_VALUE]} ON COLUMNS,
+    GENERATE(
+        TOPCOUNT(
+            ORDER(
+                EXCEPT([DIM HOUSE].[DISTRICT].MEMBERS, {[DIM HOUSE].[DISTRICT].[ALL]}),
+                [Measures].[DISTRICT_AVG_VALUE],
+                DESC
+            ),
+            1
+        ),
+        EXCEPT([DIM HOUSE].[WARD].CHILDREN, {[DIM HOUSE].[WARD].&[NaN]})
+    ) ON ROWS 
+FROM [HOUSE DW];
+------------------------------------------------- Tim phuong nho nhat trong quan NHO NHAT 
+WITH 
+MEMBER [Measures].[HOUSE_VALUE] AS 
+    [Measures].[PRICE] * [Measures].[AREA]
+
+MEMBER [Measures].[DISTRICT_AVG_VALUE] AS 
+    AVG(
+        [DIM HOUSE].[HOUSE ID].ALLMEMBERS,
+        [Measures].[HOUSE_VALUE]
+    )
+
+SELECT 
+    {[Measures].[DISTRICT_AVG_VALUE]} ON COLUMNS,
+	TOPCOUNT(
+		GENERATE(
+			TOPCOUNT(
+				ORDER(
+					EXCEPT([DIM HOUSE].[DISTRICT].MEMBERS, {[DIM HOUSE].[DISTRICT].[ALL]}),
+					[Measures].[DISTRICT_AVG_VALUE],
+					DESC
+				),
+				1
+			),
+			EXCEPT([DIM HOUSE].[WARD].CHILDREN, {[DIM HOUSE].[WARD].[NaN]})
+		),
+		1
+		)ON ROWS 
+FROM [HOUSE DW];
+--------------------------------------------------------------------------TIM NGOI NHA o phuong nho nhat 
+WITH 
+MEMBER [Measures].[HOUSE_VALUE] AS 
+    [Measures].[PRICE] * [Measures].[AREA]
+
+MEMBER [Measures].[DISTRICT_AVG_VALUE] AS 
+    AVG(
+        [DIM HOUSE].[HOUSE ID].ALLMEMBERS,
+        [Measures].[HOUSE_VALUE]
+    )
+
+SELECT 
+    {[Measures].[DISTRICT_AVG_VALUE]} ON COLUMNS,
+	GENERATE(
+		TOPCOUNT(
+			GENERATE(
+				TOPCOUNT(
+					ORDER(
+						EXCEPT([DIM HOUSE].[DISTRICT].MEMBERS, {[DIM HOUSE].[DISTRICT].[ALL]}),
+						[Measures].[DISTRICT_AVG_VALUE],
+						DESC
+					),
+					1
+				),
+				EXCEPT([DIM HOUSE].[WARD].CHILDREN, {[DIM HOUSE].[WARD].[NaN]})
+			),
+			1
+			),
+			EXCEPT([DIM HOUSE].[HOUSE ID].MEMBERS,{[DIM HOUSE].[HOUSE ID].[ALL]}))ON ROWS 
+FROM [HOUSE DW];
+			
+
+			
